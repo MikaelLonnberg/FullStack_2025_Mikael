@@ -1,6 +1,12 @@
 const msg="Hello Node.js!";
 console.log(msg);
 
-console.log('Date: ', date.getCurrentDate()); 
+const math=require('./math');
+const stringUtils=require('./stringUtils');
+const dateUtils=require('./dateUtils');
 
-"const mods = require('dateUtils', 'math', 'stringUtils');"
+console.log('Date: ', dateUtils.getCurrentDate()); 
+console.log('Formatted Date: ', dateUtils.formatDate(dateUtils.getCurrentDate()));
+console.log('Sum: ', math.add(1,2));
+console.log('Subtract: ', math.subtract(1,2));
+console.log('Reverse: ', stringUtils.reverse(msg));   
