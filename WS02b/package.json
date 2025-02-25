@@ -1,0 +1,15 @@
+{
+  "name": "ws02b",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "fs": "^0.0.1-security"
+  }
+}
