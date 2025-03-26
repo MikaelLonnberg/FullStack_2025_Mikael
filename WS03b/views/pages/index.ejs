@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Express App</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+<!-- Excercise 3-->
+    <header>
+        <%- include('../partials/header'); %>
+    </header>
+<!-- Excercise 1-->
+    <h1><%= message %></h1>
+
+<!-- Excercise 2-->
+    <h2>Item List:</h2>
+
+    <ul>
+        <% items.forEach(function(item) { %>
+            <li><%= item %></li>
+        <% }); %>
+    </ul>
+    
+<!-- Excercise 5-->
+    <h2>Users List:</h2>
+    <ul>
+        <% users.forEach(user => { %>
+            <li><%= user.name %>, <%= user.age %> years old</li>
+        <% }); %>
+    </ul>
+
+<!-- Excercise 4-->
+    <% if (isLoggedIn) { %>
+        <h2>Secret Area</h2>
+        <p>Welcome to the secret area! You can only see this when logged in.</p>
+    <% } else { %>
+        <p>Please log in to continue</p>
+    <% } %>
+
+<!-- Excercise 3-->
+    <footer><%- include('../partials/footer'); %></footer>
+
+</body>
+</html>
