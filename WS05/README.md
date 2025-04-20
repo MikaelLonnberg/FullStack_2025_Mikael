@@ -35,7 +35,7 @@ Vastaus:
   "age": 25
 }
 
-### Hae kaikki dokumentit /api/getall GET
+### Hae kaikki dokumentit /api/getall (GET)
 
 Vastaus:
 [
@@ -48,7 +48,7 @@ Vastaus:
   ...
 ]
 
-### Hae yksi dokumentti ID:llä /api/get/:id
+### Hae yksi dokumentti ID:llä /api/get/:id (GET)
 
 Url:
 /api/get/661cb63ef447947bfb350cb4
@@ -61,7 +61,7 @@ Vastaus:
   "age": 32
 }
 
-### Päivitä olemassa oleva dokumentti /api/update/:id PUT
+### Päivitä olemassa oleva dokumentti /api/update/:id (PUT)
 
 Url:
 /api/update/6804b52670f07d06db8e9ea3
@@ -81,7 +81,7 @@ Vastaus:
   "age": 35
 }
 
-### Poista dokumentti ID:llä /api/delete/:id DELETE
+### Poista dokumentti ID:llä /api/delete/:id (DELETE)
 
 Url:
 /api/delete/6804b52670f07d06db8e9ea3
