@@ -3,7 +3,8 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev --turbopack",
-    "start": "next start"
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
@@ -19,13 +20,20 @@
     "react": "latest",
     "react-dom": "latest",
     "tailwindcss": "3.4.17",
-    "typescript": "5.7.3",
     "use-debounce": "^10.0.4",
     "zod": "^3.24.1"
   },
   "devDependencies": {
+    "@eslint/js": "^9.26.0",
     "@types/node": "22.10.7",
     "@types/react": "19.0.7",
-    "@types/react-dom": "19.0.3"
+    "@types/react-dom": "19.0.3",
+    "@typescript-eslint/eslint-plugin": "^8.32.1",
+    "@typescript-eslint/parser": "^8.32.1",
+    "eslint": "^9.26.0",
+    "eslint-config-next": "^15.3.2",
+    "eslint-plugin-react": "^7.37.5",
+    "globals": "^16.1.0",
+    "typescript": "5.7.3"
   }
 }
