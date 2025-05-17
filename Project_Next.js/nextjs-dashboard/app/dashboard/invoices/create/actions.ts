@@ -24,6 +24,8 @@ const FormSchema = z.object({
 });
 
 const CreateInvoice = FormSchema.omit({ id: true, date: true });
+const UpdateInvoice = FormSchema.omit({ date: true });
+
 
 export type State = {
   errors?: {
@@ -37,10 +39,10 @@ export type State = {
 export async function createInvoice(prevState: State, formData: FormData) {
   // Validate form using Zod
   const validatedFields = CreateInvoice.safeParse({
-    customerId: formData.get('customerId'),
-    amount: formData.get('amount'),
-    status: formData.get('status'),
-  });
+  customerId: formData.get('customerId') ?? '',
+  amount: formData.get('amount') ?? '',
+  status: formData.get('status') ?? '',
+});
  
   // If form validation fails, return errors early. Otherwise, continue.
   if (!validatedFields.success) {
