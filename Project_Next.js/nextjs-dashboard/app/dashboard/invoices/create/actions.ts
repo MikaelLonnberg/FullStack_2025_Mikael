@@ -13,7 +13,7 @@ const FormSchema = z.object({
   id: z.string(),
   customerId: z.string({
     invalid_type_error: 'Please select a customer.',
-  }),
+  }).min(1, 'Please select a customer.'),
   amount: z.coerce
     .number()
     .gt(0, { message: 'Please enter an amount greater than $0.' }),
@@ -24,7 +24,7 @@ const FormSchema = z.object({
 });
 
 const CreateInvoice = FormSchema.omit({ id: true, date: true });
-const UpdateInvoice = FormSchema.omit({ date: true });
+const UpdateInvoice = FormSchema.omit({ id: true, date: true });
 
 
 export type State = {
@@ -76,6 +76,7 @@ export async function createInvoice(prevState: State, formData: FormData) {
 }
 
 export async function updateInvoice(
+  
   id: string,
   prevState: State,
   formData: FormData,
